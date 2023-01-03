@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+:root {
+    --pagewidth: 477px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
+    font-family: Karla, inter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+html {
+    padding: 0;
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5px;
+    width: 178.79px;
+    height: 26.22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar--header--image {
+    height: 26.22px;
+    width: 31.31px;
+}
+
+.navbar--header--heading {
+    width: 140.79px;
+    height: 24px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20.7482px;
+    line-height: 24px;
+    letter-spacing: -0.1em;
+
+    color: #ffffff;
+}
+
+.navbar--title {
+    font-family: inter;
+
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #fff;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 36px;
+}
+
+.inputs--fields {
+    display: flex;
+    justify-content: inherit;
+    gap: 17px;
+    margin-bottom: 15px;
+    width: var(--pagewidth);
+}
+
+.inputs--fields--field {
+    width: 230px;
+    height: 35px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.inputs--submit {
+    width: var(--pagewidth);
+    height: 35px;
+    background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+    border-radius: 5px;
+}
+
+.memeContainer {
+    position: relative;
+    width: var(--pagewidth);
+    height: calc((var(--pagewidth) * 3) / 4);
+    margin: 0 auto;
+}
+
+.meme {
+    width: 100%;
+    height: 100%;
+}
+
+.upperText {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.lowerText {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.upperText,
+.lowerText {
+    width: var(--pagewidth);
+    text-align: center;
+    font-family: 'Sigmar One';
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #ffffff;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000,
+        -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
